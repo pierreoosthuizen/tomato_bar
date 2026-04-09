@@ -1,3 +1,5 @@
 xcuserdata
 .DS_Store
 /Build
+.claude/settings.json
+.claude/settings.local.json

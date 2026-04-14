@@ -165,11 +165,29 @@ private struct SoundsView: View {
                                        comment: "Start sound label"))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }.toggleStyle(.switch)
+            if player.startSoundEnabled {
+                Picker(NSLocalizedString("SoundsView.startSoundName.label",
+                                         comment: "Start sound picker label"),
+                       selection: $player.startSoundName) {
+                    ForEach(systemSoundNames, id: \.self) { name in
+                        Text(name).tag(name)
+                    }
+                }
+            }
             Toggle(isOn: $player.endSoundEnabled) {
                 Text(NSLocalizedString("SoundsView.endSoundEnabled.label",
                                        comment: "End sound label"))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }.toggleStyle(.switch)
+            if player.endSoundEnabled {
+                Picker(NSLocalizedString("SoundsView.endSoundName.label",
+                                         comment: "End sound picker label"),
+                       selection: $player.endSoundName) {
+                    ForEach(systemSoundNames, id: \.self) { name in
+                        Text(name).tag(name)
+                    }
+                }
+            }
             Spacer().frame(minHeight: 0)
         }.padding(4)
     }

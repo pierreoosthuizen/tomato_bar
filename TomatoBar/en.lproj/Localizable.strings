@@ -14,7 +14,9 @@
 "SettingsView.autoStopEnabled.label" = "Auto-stop";
 "SettingsView.autoStopTime.label" = "Stop time";
 "SoundsView.startSoundEnabled.label" = "Start";
+"SoundsView.startSoundName.label" = "Sound";
 "SoundsView.endSoundEnabled.label" = "End";
+"SoundsView.endSoundName.label" = "Sound";
 "TBPopoverView.start.label" = "Start";
 "TBPopoverView.stop.label" = "Stop";
 "TBPopoverView.intervals.label" = "Intervals";

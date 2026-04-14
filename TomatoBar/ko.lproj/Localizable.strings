@@ -14,7 +14,9 @@
 "SettingsView.autoStopEnabled.label" = "자동 중지";
 "SettingsView.autoStopTime.label" = "중지 시간";
 "SoundsView.startSoundEnabled.label" = "시작";
+"SoundsView.startSoundName.label" = "소리";
 "SoundsView.endSoundEnabled.label" = "종료";
+"SoundsView.endSoundName.label" = "소리";
 "TBPopoverView.start.label" = "시작";
 "TBPopoverView.stop.label" = "중지";
 "TBPopoverView.intervals.label" = "간격";

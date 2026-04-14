@@ -84,6 +84,7 @@ xcodebuild build -scheme TomatoBar -configuration Debug -destination 'platform=m
 | [[LOGGING]] | Logging strategy and rules |
 | [[TOOLS]] | This document |
 | [[LEGAL]] | Copyright, licences |
+| [[APP-STORE-LISTING]] | App Store copy and metadata |
 
 ---
 

@@ -69,3 +69,4 @@ Tiny Tomato Bar is a macOS menu-bar Pomodoro timer available on the Mac App Stor
 - [[LOGGING]] — Logging strategy and rules
 - [[TOOLS]] — Tools and automation
 - [[LEGAL]] — Copyright, licences
+- [[APP-STORE-LISTING]] — App Store copy and metadata

@@ -10,10 +10,10 @@
 			<key>CFBundleURLIconFile</key>
 			<string></string>
 			<key>CFBundleURLName</key>
-			<string>com.github.ivoronin.TomatoBar</string>
+			<string>com.ploutonconsulting.veridian</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tomatobar</string>
+				<string>veridian</string>
 			</array>
 		</dict>
 	</array>

@@ -12,7 +12,7 @@ tags:
 
 ## Mission
 
-TomatoBar is the world's neatest Pomodoro timer for the macOS menu bar — configurable work and rest intervals, optional sounds, discreet notifications, and a global hotkey, all in a fully sandboxed app.
+Tiny Tomato Bar is a macOS menu-bar Pomodoro timer available on the Mac App Store — configurable work and rest intervals, system sounds, discreet notifications, and a global hotkey, all in a fully sandboxed app. Fork of TomatoBar by Ilya Voronin.
 
 ## Milestones
 
@@ -21,6 +21,7 @@ TomatoBar is the world's neatest Pomodoro timer for the macOS menu bar — confi
 | Auto-start/auto-stop scheduling | 2026-04-09 | Complete |
 | Lunch pause feature (removed) | 2026-04-09 | Removed |
 | Localization (en, ko, zh-Hans) | — | Complete |
+| App Store release (Tiny Tomato Bar) | 2026-04 | In progress |
 
 ## Risks
 

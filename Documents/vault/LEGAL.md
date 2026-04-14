@@ -35,11 +35,16 @@ No source file header is currently required by the project.
 | KeyboardShortcuts | MIT | Include licence in distribution |
 | LaunchAtLogin | MIT | Include licence in distribution |
 
+## Sound Assets
+
+System sounds (Purr, Glass) are provided by macOS and do not require separate licensing.
+
 ## Compliance Notes
 
 - App is fully sandboxed with no entitlements
 - No network access, no data collection, no analytics
 - No PII handling
+- Distributed on the Mac App Store under Apple ID 6762198642
 
 ---
 

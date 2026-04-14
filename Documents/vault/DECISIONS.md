@@ -47,6 +47,15 @@ tags:
 - **Rationale:** Feature did not meet expectations. Clean removal avoids dead code and UI clutter.
 - **Consequences:** Users who had enabled lunch pause will lose the setting silently (acceptable since feature was never released).
 
+## ADR-005 — Rebrand as Tiny Tomato Bar for App Store release
+
+- **Date:** 2026-04-14
+- **Status:** Accepted
+- **Context:** The fork has diverged enough from upstream TomatoBar to warrant its own identity. Publishing on the Mac App Store requires a distinct name and bundle ID.
+- **Decision:** Rebrand to "Tiny Tomato Bar" with bundle ID `com.ploutonconsulting.veridian`. Keep internal project names as TomatoBar. Replace buddhabeats-licensed sounds with macOS system sounds (Purr, Glass). Remove ticking feature.
+- **Rationale:** MIT license permits rebranding. System sounds avoid third-party audio licensing risk. Ticking was not essential to the Pomodoro workflow.
+- **Consequences:** URL scheme changes from `tomatobar://` to `veridian://`. Log file path changes due to new container. Users of the upstream project are unaffected.
+
 ---
 
 ## Related Documents

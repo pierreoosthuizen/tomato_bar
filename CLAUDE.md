@@ -1,6 +1,6 @@
-# TomatoBar
+# Tiny Tomato Bar
 
-macOS menu-bar Pomodoro timer app (SwiftUI + AppKit). Documentation vault: `Documents/vault/`.
+macOS menu-bar Pomodoro timer (SwiftUI + AppKit), distributed on the Mac App Store. Internal project name: TomatoBar. Documentation vault: `Documents/vault/`.
 
 ## Commands
 

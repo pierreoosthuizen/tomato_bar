@@ -2,30 +2,30 @@ import AudioToolbox
 import SwiftUI
 
 class TBPlayer: ObservableObject {
-    private var windupSoundID: SystemSoundID = 0
-    private var dingSoundID: SystemSoundID = 0
+    private var startSoundID: SystemSoundID = 0
+    private var endSoundID: SystemSoundID = 0
 
-    @AppStorage("windupVolume") var windupVolume: Double = 1.0
-    @AppStorage("dingVolume") var dingVolume: Double = 1.0
+    @AppStorage("startSoundEnabled") var startSoundEnabled = true
+    @AppStorage("endSoundEnabled") var endSoundEnabled = true
 
     init() {
-        windupSoundID = Self.loadSystemSound("Purr")
-        dingSoundID = Self.loadSystemSound("Glass")
+        startSoundID = Self.loadSystemSound("Purr")
+        endSoundID = Self.loadSystemSound("Glass")
     }
 
     deinit {
-        if windupSoundID != 0 { AudioServicesDisposeSystemSoundID(windupSoundID) }
-        if dingSoundID != 0 { AudioServicesDisposeSystemSoundID(dingSoundID) }
+        if startSoundID != 0 { AudioServicesDisposeSystemSoundID(startSoundID) }
+        if endSoundID != 0 { AudioServicesDisposeSystemSoundID(endSoundID) }
     }
 
-    func playWindup() {
-        guard windupVolume > 0 else { return }
-        AudioServicesPlaySystemSound(windupSoundID)
+    func playStart() {
+        guard startSoundEnabled else { return }
+        AudioServicesPlaySystemSound(startSoundID)
     }
 
-    func playDing() {
-        guard dingVolume > 0 else { return }
-        AudioServicesPlaySystemSound(dingSoundID)
+    func playEnd() {
+        guard endSoundEnabled else { return }
+        AudioServicesPlaySystemSound(endSoundID)
     }
 
     /// Loads a system sound file into an AudioToolbox SystemSoundID.

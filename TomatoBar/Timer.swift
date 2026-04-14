@@ -264,13 +264,13 @@ class TBTimer: ObservableObject {
 
     private func onWorkStart(context _: TBStateMachine.Context) {
         TBStatusItem.shared.setIcon(name: .work)
-        player.playWindup()
+        player.playStart()
         startTimer(seconds: workIntervalLength * 60)
     }
 
     private func onWorkFinish(context _: TBStateMachine.Context) {
         consecutiveWorkIntervals += 1
-        player.playDing()
+        player.playEnd()
     }
 
     private func onRestStart(context _: TBStateMachine.Context) {

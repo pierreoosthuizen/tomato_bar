@@ -155,36 +155,23 @@ private struct SettingsView: View {
     }
 }
 
-private struct VolumeSlider: View {
-    @Binding var volume: Double
-
-    var body: some View {
-        Slider(value: $volume, in: 0...2) {
-            Text(String(format: "%.1f", volume))
-        }.gesture(TapGesture(count: 2).onEnded({
-            volume = 1.0
-        }))
-    }
-}
-
 private struct SoundsView: View {
     @EnvironmentObject var player: TBPlayer
 
-    private var columns = [
-        GridItem(.flexible()),
-        GridItem(.fixed(110))
-    ]
-
     var body: some View {
-        LazyVGrid(columns: columns, alignment: .leading, spacing: 4) {
-            Text(NSLocalizedString("SoundsView.isWindupEnabled.label",
-                                   comment: "Windup label"))
-            VolumeSlider(volume: $player.windupVolume)
-            Text(NSLocalizedString("SoundsView.isDingEnabled.label",
-                                   comment: "Ding label"))
-            VolumeSlider(volume: $player.dingVolume)
+        VStack {
+            Toggle(isOn: $player.startSoundEnabled) {
+                Text(NSLocalizedString("SoundsView.startSoundEnabled.label",
+                                       comment: "Start sound label"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }.toggleStyle(.switch)
+            Toggle(isOn: $player.endSoundEnabled) {
+                Text(NSLocalizedString("SoundsView.endSoundEnabled.label",
+                                       comment: "End sound label"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }.toggleStyle(.switch)
+            Spacer().frame(minHeight: 0)
         }.padding(4)
-        Spacer().frame(minHeight: 0)
     }
 }
 

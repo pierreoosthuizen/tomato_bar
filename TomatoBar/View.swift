@@ -172,6 +172,10 @@ private struct SoundsView: View {
                 Picker(NSLocalizedString("SoundsView.startSoundName.label",
                                          comment: "Start sound picker label"),
                        selection: $player.startSoundName) {
+                    ForEach(bundledSoundNames, id: \.self) { name in
+                        Text(name).tag(name)
+                    }
+                    Divider()
                     ForEach(systemSoundNames, id: \.self) { name in
                         Text(name).tag(name)
                     }
@@ -186,6 +190,10 @@ private struct SoundsView: View {
                 Picker(NSLocalizedString("SoundsView.endSoundName.label",
                                          comment: "End sound picker label"),
                        selection: $player.endSoundName) {
+                    ForEach(bundledSoundNames, id: \.self) { name in
+                        Text(name).tag(name)
+                    }
+                    Divider()
                     ForEach(systemSoundNames, id: \.self) { name in
                         Text(name).tag(name)
                     }

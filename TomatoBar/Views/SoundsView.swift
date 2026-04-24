@@ -5,6 +5,7 @@
 //  Created by Pierre Oosthuizen on 2026/04/24.
 //
 
+import SwiftUI
 
 private struct SoundsView: View {
     @EnvironmentObject var player: TBPlayer

@@ -5,6 +5,7 @@
 //  Created by Pierre Oosthuizen on 2026/04/24.
 //
 
+import SwiftUI
 
 private struct SettingsView: View {
     @EnvironmentObject var timer: TBTimer

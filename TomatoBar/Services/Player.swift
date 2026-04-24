@@ -1,7 +1,10 @@
 import AppKit
 import SwiftUI
 
-/// Names of system sounds available in /System/Library/Sounds/.
+/// Bundled sounds shipped with the app (loaded from Assets.xcassets).
+let bundledSoundNames = ["Ding", "Ticking", "Windup"]
+
+/// System sounds available in /System/Library/Sounds/.
 let systemSoundNames = [
     "Basso", "Blow", "Bottle", "Frog", "Funk", "Glass", "Hero",
     "Morse", "Ping", "Pop", "Purr", "Sosumi", "Submarine", "Tink"
@@ -13,10 +16,10 @@ class TBPlayer: ObservableObject {
 
     @AppStorage("startSoundEnabled") var startSoundEnabled = true
     @AppStorage("endSoundEnabled") var endSoundEnabled = true
-    @AppStorage("startSoundName") var startSoundName = "Purr" {
+    @AppStorage("startSoundName") var startSoundName = "Windup" {
         didSet { reloadStartSound() }
     }
-    @AppStorage("endSoundName") var endSoundName = "Glass" {
+    @AppStorage("endSoundName") var endSoundName = "Ding" {
         didSet { reloadEndSound() }
     }
     @AppStorage("useCustomVolume") var useCustomVolume = false
@@ -57,10 +60,12 @@ class TBPlayer: ObservableObject {
         play(endSound)
     }
 
-    /// Loads a system sound by name. Sandbox-safe (reads from
-    /// /System/Library/Sounds/). Uses byReference to avoid
-    /// copying the file into memory.
+    /// Loads a sound by name — bundled assets take priority over system sounds.
     private static func loadSound(_ name: String) -> NSSound? {
+        if bundledSoundNames.contains(name),
+           let asset = NSDataAsset(name: name.lowercased()) {
+            return NSSound(data: asset.data)
+        }
         let url = URL(fileURLWithPath: "/System/Library/Sounds/\(name).aiff")
         return NSSound(contentsOf: url, byReference: true)
     }

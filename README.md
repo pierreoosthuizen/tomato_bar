@@ -23,7 +23,7 @@ Fully sandboxed with no entitlements.
 
 - Configurable work, short rest, and long rest intervals
 - Auto-start and auto-stop scheduling with per-day control
-- System sound notifications (Purr for windup, Glass for completion)
+- Custom timer sounds (ding, ticking, windup) plus all macOS system sounds
 - Global keyboard shortcut
 - Localized in English, Korean, and Simplified Chinese
 - Launch at login
@@ -44,6 +44,12 @@ open veridian://startStop
 ## Attribution
 
 Based on [TomatoBar](https://github.com/ivoronin/TomatoBar) by Ilya Voronin, licensed under the [MIT License](LICENSE).
+
+### Sound Credits
+
+- **Ding** — "bell ding 2" by [5ro4](https://freesound.org/people/5ro4/sounds/611112/) — CC0
+- **Ticking** — "Loopable Ticking Clock" by [Ashe Kirk / Owlish Media (OwlStorm)](https://freesound.org/people/OwlStorm/sounds/212181/) — CC0
+- **Windup** — "wuc_key_and_windup" by [nemoDaedalus](https://freesound.org/people/nemoDaedalus/sounds/75324/) — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## License
 

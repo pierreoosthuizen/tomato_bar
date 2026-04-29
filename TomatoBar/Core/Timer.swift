@@ -36,7 +36,7 @@ class TBTimer: ObservableObject {
     @AppStorage("longRestIntervalLength") var longRestIntervalLength = 15
     @AppStorage("workIntervalsInSet") var workIntervalsInSet = 4
     // This preference is "hidden"
-    @AppStorage("overrunTimeLimit") var overrunTimeLimit = -60.0
+    @AppStorage("overrunTimeLimit") var overrunTimeLimit = -90.0
     @AppStorage("autoStartEnabled") var autoStartEnabled = false
     // Minutes since midnight, default 540 = 9:00 AM
     @AppStorage("autoStartMinutesSinceMidnight") var autoStartMinutesSinceMidnight = 540

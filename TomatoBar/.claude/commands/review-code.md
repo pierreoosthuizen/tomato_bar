@@ -32,7 +32,20 @@ For the identified scope, improve its documentation:
    but do not apply fixes — present them as a separate follow-up action for
    Pierre to confirm.
 
-After making changes, show a brief summary covering:
-- What was reviewed (scope: highlighted code / named method or class / full file)
-- What was documented
-- Any SOLID violations found (or confirm all principles are satisfied)
+After making changes, show a summary in this exact structure:
+
+**Verdict:** `<one word: catastrophe | bad | mediocre | ok>`
+(Reflects the code quality *before* your review — ok means genuinely solid code, not a courtesy.)
+
+**Reviewed:** `<scope: highlighted code / named method or class / full file>`
+
+**Documented:** `<brief prose — what docstrings/comments were added or improved>`
+
+**Issues found:**
+If any SOLID violations, design pattern misuse, or code quality concerns were identified,
+list them as numbered items in this format:
+  1. `file:line` — <concise description of the issue>
+  2. `file:line` — <concise description of the issue>
+  ...
+
+If no issues were found, write: ✅ No violations — all principles satisfied.

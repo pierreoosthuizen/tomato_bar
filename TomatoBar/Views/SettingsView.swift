@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import KeyboardShortcuts
+import LaunchAtLogin
 
-private struct SettingsView: View {
+struct SettingsView: View {
     @EnvironmentObject var timer: TBTimer
     var body: some View {
         VStack {

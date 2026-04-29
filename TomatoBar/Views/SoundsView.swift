@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-private struct SoundsView: View {
+struct SoundsView: View {
     @EnvironmentObject var player: TBPlayer
 
     var body: some View {

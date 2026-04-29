@@ -14,7 +14,7 @@ import SwiftUI
 /// Used for both the auto-start and auto-stop schedule day pickers.
 ///
 /// - Parameter days: Bitmask binding where each bit represents a day of the week.
-private struct DayPickerView: View {
+struct DayPickerView: View {
     @Binding var days: Int
     private let calendar: Calendar
     // Symbols computed once from the injected calendar (index 0 = Sunday)

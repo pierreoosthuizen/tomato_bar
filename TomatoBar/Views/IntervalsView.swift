@@ -6,17 +6,18 @@ extension KeyboardShortcuts.Name {
     static let startStopTimer = Self("startStopTimer")
 }
 
-private enum ChildView {
+enum ChildView {
     case intervals, settings, sounds
 }
 
-private struct IntervalsView: View {
+struct IntervalsView: View {
     @EnvironmentObject var timer: TBTimer
     private var minStr = NSLocalizedString("IntervalsView.min", comment: "min")
+    private let maxInterval = 90
 
     var body: some View {
         VStack {
-            Stepper(value: $timer.workIntervalLength, in: 1 ... 60) {
+            Stepper(value: $timer.workIntervalLength, in: 1 ... maxInterval) {
                 HStack {
                     Text(NSLocalizedString("IntervalsView.workIntervalLength.label",
                                            comment: "Work interval label"))
@@ -24,7 +25,7 @@ private struct IntervalsView: View {
                     Text(String.localizedStringWithFormat(minStr, timer.workIntervalLength))
                 }
             }
-            Stepper(value: $timer.shortRestIntervalLength, in: 1 ... 60) {
+            Stepper(value: $timer.shortRestIntervalLength, in: 1 ... maxInterval) {
                 HStack {
                     Text(NSLocalizedString("IntervalsView.shortRestIntervalLength.label",
                                            comment: "Short rest interval label"))
@@ -32,7 +33,7 @@ private struct IntervalsView: View {
                     Text(String.localizedStringWithFormat(minStr, timer.shortRestIntervalLength))
                 }
             }
-            Stepper(value: $timer.longRestIntervalLength, in: 1 ... 60) {
+            Stepper(value: $timer.longRestIntervalLength, in: 1 ... maxInterval) {
                 HStack {
                     Text(NSLocalizedString("IntervalsView.longRestIntervalLength.label",
                                            comment: "Long rest interval label"))
@@ -42,7 +43,7 @@ private struct IntervalsView: View {
             }
             .help(NSLocalizedString("IntervalsView.longRestIntervalLength.help",
                                     comment: "Long rest interval hint"))
-            Stepper(value: $timer.workIntervalsInSet, in: 1 ... 10) {
+            Stepper(value: $timer.workIntervalsInSet, in: 1 ... maxInterval) {
                 HStack {
                     Text(NSLocalizedString("IntervalsView.workIntervalsInSet.label",
                                            comment: "Work intervals in a set label"))
